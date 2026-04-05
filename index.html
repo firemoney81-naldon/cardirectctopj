@@ -1,23 +1,419 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "mainEntity": {
+      "@type": "Article",
+      "headline": "폴스타2 유지비 상세 분석: 2026년 충전비용, 보험료, 소모품 완벽 가이드",
+      "description": "폴스타2 유지비에 대한 모든 것을 알아봅니다. 2026년 기준 싱글모터, 롱레인지 듀얼모터 모델의 충전비용, 보험료, 자동차세, 소모품 교체 비용 등 상세한 견적과 장단점을 비교 분석합니다.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://도메인/polestar2_main_image.jpg",
+        "width": 1200,
+        "height": 675
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "EV Expert Group"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "EV Expert Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://도메인/logo.png"
+        }
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05"
+    }
+  }
+  </script>
+
+  <style>
+    /* Noto Sans KR 폰트 적용 및 기본 스타일 설정 */
+    body { font-family: 'Noto Sans KR', sans-serif; margin:0; padding:0; background:#f4f7fa; color:#333; line-height:1.7; }
+    header {
+      background:#ffffff;
+      padding:40px 20px;
+      text-align:center;
+      box-shadow:0 2px 5px rgba(0,0,0,0.05);
+      background: linear-gradient(135deg, #eef5ff 0%, #ffffff 100%);
+    }
+    main { max-width:960px; margin:20px auto; padding:20px; background:#ffffff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    section { margin-bottom:40px; padding:20px; border-radius:10px; background:#ffffff; }
+    h1 { font-size:2.8rem; font-weight:700; color:#0056b3; line-height:1.3; margin-top:0; margin-bottom:15px; }
+    h2 { font-size:2.2rem; border-bottom:3px solid #0056b3; padding-bottom:10px; font-weight:600; color:#1f5a9f; }
+    h3 { font-size:1.6rem; color:#333; border-left:4px solid #4285f4; padding-left:15px; margin-top:30px; margin-bottom:15px; font-weight:600; }
+    p, li, td, th { font-size:1.05rem; line-height:1.7; color:#444; }
+    ul, ol { padding-left:25px; margin-top:10px; }
+    li { margin-bottom:8px; }
+    table { width:100%; border-collapse: separate; border-spacing: 0; margin:20px 0; font-size:1rem; border-radius:8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    th, td { border:1px solid #e0e6ec; padding:15px; text-align:left; vertical-align:middle; }
+    th { background:#f0f4f8; color:#0056b3; font-weight:700; border-bottom:2px solid #0056b3; }
+    td:first-child { font-weight:500; background-color: #fcfcfc; }
+    a { color:#0056b3; text-decoration:none; transition: color 0.3s; }
+    a:hover { text-decoration:underline; color:#004085; }
+    .btn-cta {
+      display:inline-block;
+      padding:15px 35px;
+      background:#0056b3; /* Primary Blue */
+      color:#fff;
+      font-weight:700;
+      border:none;
+      border-radius:30px;
+      box-shadow:0 6px 10px rgba(0, 86, 179, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration:none;
+      text-align:center;
+      margin-top:20px;
+    }
+    .btn-cta:hover { background:#004085; transform:translateY(-2px); }
+    .anchor { display:block; position:relative; top:-100px; visibility:hidden; }
+    .highlight {
+      background-color: #fcf8e3; padding:20px; border-left:5px solid #ffc107; margin:20px 0; border-radius:8px;
+      font-size:1.05rem; line-height:1.7;
+    }
+    .sub-section { padding:20px; border:1px solid #e0e6ec; border-radius:8px; margin-top:20px; background:#fafafa; }
+    .form-group { margin-bottom:15px; }
+    .form-group label { display:block; font-weight:500; margin-bottom:5px; color:#555; }
+    .form-group input, .form-group select, .form-group textarea {
+      width:100%; padding:12px; border:1px solid #ccddee; border-radius:6px; box-sizing:border-box;
+      font-size:1rem; color:#333; transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #0056b3; box-shadow: 0 0 5px rgba(0, 86, 179, 0.2); outline: none; }
+    footer { text-align:center; padding:20px; background:#eef5ff; margin-top:30px; border-top:1px solid #e0e6ec; }
+    .comparison-table { margin-top: 30px; }
+    .comparison-table th { background-color: #0056b3; color: white; border-color: #0056b3; }
+    .chart-placeholder { width: 100%; height: 250px; background-color: #f0f4f8; border-radius: 8px; margin-top: 20px; display: flex; align-items: center; justify-content: center; color: #777; font-size: 1.2rem; }
+    .cta-button-group { text-align: center; margin-top: 30px; }
+
+    /* 반응형 디자인 */
+    @media(max-width:768px) {
+      main { margin:10px auto; padding:15px; }
+      h1 { font-size:2.4rem; }
+      h2 { font-size:2rem; }
+      h3 { font-size:1.5rem; }
+      p, li, td, th { font-size:1rem; line-height:1.6; }
+      .btn-cta { width:100%; padding:15px 0; }
+      table, .comparison-table { display: block; overflow-x: auto; white-space: nowrap; }
+      table thead, table tbody, table tr { display: inline-block; }
+      table th, table td { display: block; width: auto; }
+      .form-group input, .form-group select, .form-group textarea { padding:10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><span style="color:#1f5a9f;">폴스타2 유지비</span> 완벽 분석: 2026년 충전비용, 보험료, 소모품 가이드</h1>
+    <p>폴스타2 구매 전 반드시 확인해야 할 <span style="font-weight:bold; color:#d9534f;">유지비</span> A부터 Z까지, 전문가가 알려드립니다.</p>
+    <a class="btn-cta" href="#cost-calculator">나의 예상 유지비 계산해보기</a>
+  </header>
+
+  <main>
+    <nav aria-label="페이지 내 이동">
+      <ul style="list-style-type:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:30px;">
+        <li><a href="#overview" class="btn-cta" style="background:#f0f4f8; color:#333; box-shadow:none; padding:10px 20px;">유지비 개요</a></li>
+        <li><a href="#charging-cost" class="btn-cta" style="background:#f0f4f8; color:#333; box-shadow:none; padding:10px 20px;">충전비용 분석</a></li>
+        <li><a href="#other-cost" class="btn-cta" style="background:#f0f4f8; color:#333; box-shadow:none; padding:10px 20px;">보험료 및 세금</a></li>
+        <li><a href="#consumables" class="btn-cta" style="background:#f0f4f8; color:#333; box-shadow:none; padding:10px 20px;">소모품 교체</a></li>
+        <li><a href="#comparison" class="btn-cta" style="background:#f0f4f8; color:#333; box-shadow:none; padding:10px 20px;">경쟁 모델 비교</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="overview">
+      <span id="overview-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 유지비</span>, 전기차의 장점을 살려 얼마나 절약할 수 있을까?</h2>
+      <p>폴스타2는 세련된 디자인과 뛰어난 성능으로 많은 관심을 받는 프리미엄 전기차입니다. 하지만 전기차를 처음 구매하는 소비자라면 <span style="font-weight:bold; color:#d9534f;">폴스타2 유지비</span>가 내연기관차와 어떻게 다른지 정확히 파악하는 것이 중요합니다. 단순히 기름값 대신 전기 충전비가 나가는 것을 넘어, 전기차만의 특성과 소모품 교체 주기를 고려해야 합니다.</p>
+      <div class="highlight">
+        <h3>폴스타2 유지비의 핵심: 내연기관차와의 차이점</h3>
+        <ul>
+          <li><strong>연료비:</strong> 내연기관차 대비 1/5 수준의 충전비용으로 대폭 절감 가능.</li>
+          <li><strong>자동차세:</strong> 배기량 기준이 아닌 고정 금액(승용차 기준 13만원)으로 저렴함.</li>
+          <li><strong>소모품:</strong> 엔진오일, 연료필터 등 내연기관 필수 소모품이 없어 정비 비용 절감.</li>
+          <li><strong>보험료:</strong> 차량 가격이 높고 사고 시 수리비가 비싸 보험료가 높게 책정될 수 있음.</li>
+        </ul>
+        <p>전체적인 <span style="font-weight:bold; color:#d9534f;">폴스타2 유지비</span>는 내연기관차 대비 분명히 저렴합니다. 그러나 고가 차량 특성상 높은 보험료와 배터리 관련 잠재적 비용을 고려한 장기적인 관점에서 접근해야 합니다.</p>
+      </div>
+    </section>
+
+    <section id="charging-cost">
+      <span id="charging-cost-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 충전비용</span> 상세 분석: 홈 충전 vs 공용 충전소</h2>
+      <p><span style="font-weight:bold;">폴스타2 유지비</span> 중 가장 큰 비중을 차지하는 것은 충전비용입니다. 충전 방식과 시간대에 따라 비용 차이가 크므로, 자신의 주행 습관에 맞는 충전 전략이 필수적입니다.</p>
+
+      <h3>1. 홈 충전 (아파트, 단독주택 완속 충전기)</h3>
+      <p>가장 저렴하게 충전할 수 있는 방법입니다. 주로 심야 시간대에 충전 요금 할인 혜택을 받을 수 있으며, 2026년 기준으로 주택용 전기 요금 기준을 적용받습니다.</p>
+      <ul>
+        <li><strong>충전 단가 (예시):</strong> 심야 시간대(밤 11시~아침 9시) 1kWh당 약 50~70원 (환경부 기준).</li>
+        <li><strong>폴스타2 배터리 용량:</strong> 싱글모터(69kWh), 롱레인지(78kWh).</li>
+        <li><strong>완충 시 예상 비용:</strong> 롱레인지 모델 기준 (78kWh x 70원) = 약 5,460원.</li>
+        <li><strong>월 예상 비용 (1,000km 주행 기준):</strong> 1,000km 주행을 위한 전력량 (약 180~200kWh) x 70원 = 약 12,600원~14,000원.</li>
+      </ul>
+
+      <h3>2. 공용 급속 충전소 (고속도로 휴게소, 공공시설)</h3>
+      <p>급속 충전은 시간당 충전량이 많아 편리하지만, 완속 충전 대비 비용이 훨씬 비쌉니다. 공용 충전기의 요금은 충전기 사업자(한국전력, 환경부, 민간 사업자) 및 충전 속도(50kW, 100kW, 200kW)에 따라 다릅니다.</p>
+      <ul>
+        <li><strong>충전 단가 (예시):</strong> 1kWh당 300원~400원 수준. (2026년 기준)</li>
+        <li><strong>완충 시 예상 비용:</strong> 롱레인지 모델 기준 (78kWh x 350원) = 약 27,300원.</li>
+        <li><strong>월 예상 비용 (1,000km 주행 기준):</strong> 1,000km 주행을 위한 전력량 (약 180~200kWh) x 350원 = 약 63,000원~70,000원.</li>
+      </ul>
+      <p>결론적으로 <span style="font-weight:bold;">폴스타2 유지비</span>를 절감하려면 주된 충전 수단으로 홈 충전을 활용하고, 장거리 운행 시에만 공용 급속 충전소를 이용하는 것이 현명합니다. 전기차는 주유비 절감 효과가 커서 <span style="font-weight:bold;">유지비</span>가 내연기관차보다 <span style="font-weight:bold;">저렴한곳</span>을 찾을 필요가 없습니다. <span style="font-weight:bold;">폴스타2 롱레인지</span> 모델 기준으로 연간 2만km 주행 시 연료비 절감 효과는 연간 200만원 이상에 달할 수 있습니다.</p>
+      <div class="chart-placeholder">
+        <!-- Chart.js or D3.js를 활용한 연간 연료비 비교 그래프 (폴스타2 vs 내연기관차) 삽입 예정 -->
+        <p><strong>그래프: 폴스타2와 내연기관차의 연간 연료비 비교 (연간 2만km 주행 기준)</strong></p>
+      </div>
+    </section>
+
+    <section id="other-cost">
+      <span id="other-cost-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 보험료</span> 및 자동차세 상세 견적</h2>
+      <p><span style="font-weight:bold;">폴스타2 유지비</span>에서 연료비 외에 큰 비중을 차지하는 항목은 보험료와 자동차세입니다. 특히 보험료는 운전자 경력 및 차량 가격에 따라 변동 폭이 큽니다.</p>
+
+      <h3>1. 자동차세 (세금)</h3>
+      <p>전기차의 가장 큰 장점 중 하나는 저렴한 자동차세입니다. 내연기관차는 배기량에 따라 세금이 책정되지만, 전기차는 비영업용 승용차 기준으로 13만원(교육세 포함)의 고정 금액이 부과됩니다. 이는 <span style="font-weight:bold;">폴스타2</span>를 포함한 모든 전기차에 동일하게 적용됩니다. 2026년 현재까지도 이 정책은 유지되고 있습니다.</p>
+
+      <h3>2. 보험료 (차량가액 및 자차보험)</h3>
+      <p>전기차 보험료는 차량가액에 비례하여 높게 책정되는 경향이 있습니다. <span style="font-weight:bold;">폴스타2 가격</span>이 일반 국산 중형차보다 높기 때문에 보험료 <span style="font-weight:bold;">견적</span>도 높을 수 있습니다. 또한, 전기차는 배터리팩 수리비가 비싸기 때문에 자차 보험료가 높은 편입니다.</p>
+      <div class="highlight">
+        <h4><span style="color:#1f5a9f;">폴스타2</span> 보험 가입 시 고려 사항:</h4>
+        <ol>
+          <li><strong>특약 확인:</strong> 전기차 전용 특약(충전 중 사고 보상, 충전기 설치 지원 등) 가입 가능 여부 확인.</li>
+          <li><strong>배터리 보상:</strong> 배터리 보상 특약을 통해 사고 시 고가 배터리 교체 비용을 보상받는지 확인.</li>
+          <li><strong>차량가액:</strong> 차량 가격이 높을수록 보험료가 올라가므로, 보험사별 <span style="font-weight:bold;">비교</span>가 필수입니다.</li>
+        </ol>
+      </div>
+      <p>운전 경력 10년 이상 기준, 2026년 <span style="font-weight:bold;">폴스타2 싱글모터</span> 모델의 연간 보험료 <span style="font-weight:bold;">예상</span> <span style="font-weight:bold;">금액</span>은 약 80만원~120만원 수준입니다. 이는 개인의 사고 이력, 운전자 범위, 보험사 <span style="font-weight:bold;">순위</span>에 따라 크게 달라질 수 있습니다.</p>
+    </section>
+
+    <section id="consumables">
+      <span id="consumables-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 소모품</span> 교체 주기 및 정비 비용</h2>
+      <p><span style="font-weight:bold;">폴스타2 유지비</span>에서 연료비 다음으로 중요한 부분은 정비 및 소모품 <span style="font-weight:bold;">비용</span>입니다. 전기차는 내연기관차와 달리 엔진오일이나 미션오일 교체가 필요 없어 정비소 방문 횟수가 줄어듭니다. 하지만 전기차 고유의 소모품 관리가 필요합니다.</p>
+
+      <h3>1. 타이어 교체 (EV 전용 타이어)</h3>
+      <p>전기차는 무거운 배터리 무게로 인해 일반 차량보다 타이어 마모 속도가 빠릅니다. 또한, 전기차 전용 타이어는 소음 감소와 낮은 구름저항을 위해 특수 설계되어 일반 타이어보다 가격이 높습니다. <span style="font-weight:bold;">폴스타2</span>의 순정 타이어는 미쉐린 프라이머시 4 사계절 타이어 또는 콘티넨탈 프리미엄컨택트 6 모델이 주로 사용됩니다.</p>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>소모품</th>
+              <th>교체 주기 (권장)</th>
+              <th>예상 교체 비용 (2026년 기준)</th>
+              <th>특징 및 <span style="font-weight:bold;">장점</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>타이어</td>
+              <td>40,000 ~ 50,000km</td>
+              <td>1짝당 25만원 ~ 40만원</td>
+              <td>전기차의 높은 토크와 무게로 마모가 빠름. EV 전용 타이어 사용 권장.</td>
+            </tr>
+            <tr>
+              <td>브레이크 패드/디스크</td>
+              <td>80,000 ~ 100,000km</td>
+              <td>패드 10만~15만원, 디스크 30만원 이상</td>
+              <td>회생 제동으로 인해 내연기관차보다 수명이 훨씬 김.</td>
+            </tr>
+            <tr>
+              <td>에어컨 필터 (Cabin Filter)</td>
+              <td>1년 또는 15,000km</td>
+              <td>5만원 ~ 10만원 (공임 포함)</td>
+              <td>외부 미세먼지 유입 방지. 자가 교체 가능 시 <span style="font-weight:bold;">비용</span> 절감.</td>
+            </tr>
+            <tr>
+              <td>와이퍼 블레이드</td>
+              <td>1년</td>
+              <td>2만원 ~ 5만원</td>
+              <td>일반 차량과 동일한 수준.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. 브레이크 마모의 <span style="font-weight:bold;">차이점</span></h3>
+      <p>내연기관차와 <span style="font-weight:bold;">폴스타2</span>의 가장 큰 <span style="font-weight:bold;">차이점</span>은 브레이크 사용 방식입니다. <span style="font-weight:bold;">폴스타2</span>는 회생 제동 시스템을 적극적으로 활용하여 주행 중 감속 시 브레이크 패드 마모가 현저히 적습니다. 따라서 <span style="font-weight:bold;">유지비</span> 항목 중 브레이크 관련 <span style="font-weight:bold;">비용</span>은 내연기관차 대비 2~3배 이상 절감될 수 있습니다.</p>
+    </section>
+
+    <section id="comparison">
+      <span id="comparison-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 유지비</span>, 경쟁 모델 (테슬라 모델3, 아이오닉6)과 비교</h2>
+      <p><span style="font-weight:bold;">폴스타2</span> 구매를 고려할 때 경쟁 모델인 테슬라 모델3나 현대 아이오닉6와 <span style="font-weight:bold;">유지비</span>를 <span style="font-weight:bold;">비교</span>해보는 것은 필수입니다. 각 모델은 충전 효율, 보험료, 정비 편의성 등에서 <span style="font-weight:bold;">차이점</span>을 보입니다.</p>
+      <div class="sub-section comparison-table">
+        <h3>경쟁 모델별 연간 예상 유지비 <span style="font-weight:bold;">비교</span> (2026년 기준, 15,000km 주행 가정)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>폴스타2 롱레인지</th>
+              <th>테슬라 모델3 롱레인지</th>
+              <th>현대 아이오닉6 롱레인지</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>차량 가격대 (<span style="font-weight:bold;">평균</span>)</strong></td>
+              <td>5천만원대 후반</td>
+              <td>6천만원대 초반</td>
+              <td>5천만원대 초반</td>
+            </tr>
+            <tr>
+              <td><strong>연간 충전비용 (<span style="font-weight:bold;">예상</span>)</strong></td>
+              <td>약 30만원 (홈 충전 기준)</td>
+              <td>약 25만원 (슈퍼차저 포함)</td>
+              <td>약 28만원 (홈 충전 기준)</td>
+            </tr>
+            <tr>
+              <td><strong>자동차세 (<span style="font-weight:bold;">금액</span>)</strong></td>
+              <td>13만원</td>
+              <td>13만원</td>
+              <td>13만원</td>
+            </tr>
+            <tr>
+              <td><strong>연간 보험료 (<span style="font-weight:bold;">평균</span>)</strong></td>
+              <td>약 100만원</td>
+              <td>약 120만원</td>
+              <td>약 90만원</td>
+            </tr>
+            <tr>
+              <td><strong>소모품 <span style="font-weight:bold;">비용</span> (연간 <span style="font-weight:bold;">예상</span>)</strong></td>
+              <td>약 15만원</td>
+              <td>약 10만원 (DIY 시)</td>
+              <td>약 15만원</td>
+            </tr>
+            <tr>
+              <td><strong>총 연간 <span style="font-weight:bold;">유지비</span> <span style="font-weight:bold;">평균</span></strong></td>
+              <td><strong>약 158만원</strong></td>
+              <td><strong>약 168만원</strong></td>
+              <td><strong>약 146만원</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>표를 보면 알 수 있듯이, <span style="font-weight:bold;">폴스타2</span>는 국산차 대비 높은 차량 가격으로 인해 보험료가 높게 책정되어 전체 <span style="font-weight:bold;">유지비</span>가 소폭 높을 수 있습니다. 하지만 이는 모델 선택(싱글모터 vs 듀얼모터)과 운전자 경력에 따라 달라질 수 있습니다.</p>
+      <div class="highlight">
+        <h4><span style="color:#1f5a9f;">폴스타2</span> 오너들의 <span style="font-weight:bold;">내돈내산 후기</span> 핵심 요약</h4>
+        <p>네이버 <span style="font-weight:bold;">폴스타2</span> 카페 및 <span style="font-weight:bold;">디시</span>인사이드 등 온라인 커뮤니티 <span style="font-weight:bold;">후기</span>에 따르면, <span style="font-weight:bold;">폴스타2</span>는 정비 편의성 면에서 테슬라보다 <span style="font-weight:bold;">장점</span>이 있다는 평가가 많습니다. 볼보 서비스센터를 공유하여 정비 접근성이 좋다는 <span style="font-weight:bold;">장점</span>이 있습니다.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <span id="faq-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 유지비</span> 관련 자주 묻는 질문 (FAQ)</h2>
+      <dl>
+        <dt>Q1: <span style="font-weight:bold;">폴스타2 워런티</span> 기간은 어떻게 되나요?</dt>
+        <dd>A: <span style="font-weight:bold;">폴스타2</span>의 일반 부품 <span style="font-weight:bold;">워런티</span>는 5년/10만km입니다. 핵심 부품인 고전압 배터리는 8년/16만km로 보증됩니다. 전기차 배터리는 고가이기 때문에 보증 기간을 꼼꼼히 확인해야 합니다.</dd>
+        <dt>Q2: <span style="font-weight:bold;">폴스타2</span> 충전 비용을 <span style="font-weight:bold;">저렴한곳</span>에서 찾으려면 어떻게 해야 하나요?</dt>
+        <dd>A: <span style="font-weight:bold;">폴스타2 충전비용</span>을 절감하는 가장 좋은 방법은 거주지 환경에 따라 홈 충전기 설치를 고려하는 것입니다. 만약 홈 충전이 어렵다면, 환경부 무공해차 통합누리집이나 민간 충전 사업자(파워큐브, GS차지비 등)의 회원 카드를 <span style="font-weight:bold;">가입</span>하여 <span style="font-weight:bold;">할인</span> <span style="font-weight:bold;">혜택</span>을 받는 것이 좋습니다. <span style="font-weight:bold;">신규 가입</span> <span style="font-weight:bold;">이벤트</span>를 활용하면 추가 <span style="font-weight:bold;">혜택</span>을 받을 수 있습니다.</dd>
+        <dt>Q3: <span style="font-weight:bold;">폴스타2 소모품</span> 교체 시 <span style="font-weight:bold;">전문 업체</span>를 이용해야 하나요?</dt>
+        <dd>A: 에어컨 필터나 와이퍼 같은 간단한 <span style="font-weight:bold;">소모품</span>은 자가 교체하거나 일반 <span style="font-weight:bold;">업체</span>를 이용해도 무방합니다. 하지만 고전압 배터리 관련 점검이나 핵심 부품 정비는 <span style="font-weight:bold;">폴스타</span> 공식 서비스센터를 이용하는 것이 안전합니다. 특히 <span style="font-weight:bold;">폴스타2</span>는 소프트웨어 업데이트나 진단이 중요하므로 공식 서비스센터를 <span style="font-weight:bold;">추천</span>합니다.</dd>
+      </dl>
+    </section>
+
+    <section id="cost-calculator">
+      <span id="cost-calculator-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 유지비</span> <span style="font-weight:bold;">예상 견적</span> 계산기</h2>
+      <p>실제 <span style="font-weight:bold;">폴스타2 유지비</span>를 정확히 계산하려면 운전자의 특성(주행 거리, 충전 환경)이 중요합니다. 아래 계산기에 정보를 입력하여 개인 맞춤형 <span style="font-weight:bold;">예상 유지비</span>를 확인해보세요.</p>
+      <form action="/submit" method="POST" style="max-width:600px; margin:auto; padding:20px; border:1px solid #e0e6ec; border-radius:8px; background:#f9f9f9;">
+        <div class="form-group">
+          <label for="model_type">폴스타2 모델 선택</label>
+          <select id="model_type" name="model_type" required>
+            <option value="">모델을 선택하세요</option>
+            <option value="single_motor">싱글모터 (69kWh)</option>
+            <option value="dual_motor">롱레인지 듀얼모터 (78kWh)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="annual_mileage">연간 예상 주행 거리 (km)</label>
+          <input type="number" id="annual_mileage" name="annual_mileage" required placeholder="예: 15000" />
+        </div>
+        <div class="form-group">
+          <label for="charging_ratio">충전 환경 (집밥:외부 급속 충전 비율, 예: 80% 홈충전)</label>
+          <input type="number" id="charging_ratio" name="charging_ratio" required placeholder="예: 80 (단위: %)" />
+        </div>
+        <div class="form-group">
+          <label for="insurance_driver_age">운전자 연령대</label>
+          <select id="insurance_driver_age" name="insurance_driver_age" required>
+            <option value="">선택하세요</option>
+            <option value="20s">20대</option>
+            <option value="30s">30대</option>
+            <option value="40s">40대</option>
+            <option value="50s_plus">50대 이상</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="insurance_car_age">차량 연식 (구매 예정 시 0으로 입력)</label>
+          <input type="number" id="insurance_car_age" name="insurance_car_age" required placeholder="예: 1 (1년차)" />
+        </div>
+        <div class="form-group">
+          <label for="current_car_type">현재 운행 중인 차량 (비교군)</label>
+          <select id="current_car_type" name="current_car_type">
+            <option value="">없음</option>
+            <option value="gasoline">가솔린</option>
+            <option value="diesel">디젤</option>
+            <option value="hybrid">하이브리드</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="specific_request">추가 문의 사항</label>
+          <textarea id="specific_request" name="specific_request" rows="3" placeholder="예: 현재 아이오닉6 운행 중입니다. 폴스타2 유지비 비교가 궁금합니다."></textarea>
+        </div>
+        <button type="submit" class="btn-cta">유지비 견적 요청하기</button>
+      </form>
+    </section>
+
+    <!-- 20,000자 이상 구성 요청에 따른 상세 정보 섹션 추가 -->
+    <section id="detailed-info">
+      <span id="detailed-info-anchor" class="anchor"></span>
+      <h2><span style="color:#1f5a9f;">폴스타2 유지비</span> 심층 분석: 장기 <span style="font-weight:bold;">단점</span>과 숨겨진 <span style="font-weight:bold;">비용</span> 가이드 (2026년 업데이트)</h2>
+      <p>전기차 <span style="font-weight:bold;">유지비</span>는 내연기관차 대비 저렴하다는 <span style="font-weight:bold;">장점</span>이 명확합니다. 하지만 <span style="font-weight:bold;">폴스타2</span>와 같은 프리미엄 전기차를 장기간 소유할 때 발생할 수 있는 잠재적인 <span style="font-weight:bold;">단점</span>과 숨겨진 <span style="font-weight:bold;">비용</span>을 미리 파악하는 것이 중요합니다. 특히 2026년은 전기차 보조금 축소와 충전 요금 인상 추세가 맞물려 초기 구매 비용과 <span style="font-weight:bold;">유지비</span>에 대한 현실적인 계산이 필요합니다.</p>
+
+      <h3>1. <span style="color:#1f5a9f;">폴스타2 유지비</span>의 <span style="font-weight:bold;">단점</span>: 충전 요금 인상과 배터리 관리</h3>
+      <p>전기차 <span style="font-weight:bold;">유지비</span>의 핵심은 충전 <span style="font-weight:bold;">비용</span>입니다. 2026년 현재 한국전력공사의 전기 요금 현실화 정책에 따라 충전 요금이 꾸준히 인상되고 있습니다. 과거에는 1kWh당 100원 미만이었던 공용 급속 충전 요금이 현재 300~400원대로 올랐습니다. 향후 몇 년간 추가 인상이 예상됩니다. 따라서 <span style="font-weight:bold;">폴스타2</span>의 <span style="font-weight:bold;">장점</span>인 저렴한 연료비가 점차 상쇄될 수 있습니다.</p>
+      <div class="highlight">
+        <h4><span style="color:#1f5a9f;">폴스타2</span> 배터리 관리 <span style="font-weight:bold;">비용</span> (장기 관점)</h4>
+        <ul>
+          <li><strong>배터리 수명:</strong> <span style="font-weight:bold;">폴스타2</span> 배터리는 8년/16만km 보증되지만, 시간이 지남에 따라 성능이 저하됩니다. 2026년 <span style="font-weight:bold;">기준</span> <span style="font-weight:bold;">평균</span> 10년 후 배터리 성능 저하율은 15~20%로 <span style="font-weight:bold;">예상</span>됩니다.</li>
+          <li><strong>배터리 교체 <span style="font-weight:bold;">가격</span>:</strong> <span style="font-weight:bold;">폴스타2</span> 배터리팩 교체 <span style="font-weight:bold;">가격</span>은 2026년 <span style="font-weight:bold;">기준</span> 수천만원에 달합니다. 보증 기간 이후의 배터리 수리 <span style="font-weight:bold;">비용</span>은 <span style="font-weight:bold;">폴스타2 유지비</span>의 가장 큰 잠재적 <span style="font-weight:bold;">단점</span>입니다.</li>
+        </ul>
+      </div>
+
+      <h3>2. <span style="color:#1f5a9f;">폴스타2</span> 운행에 AI/빅데이터 활용하기</h3>
+      <p>최근에는 <span style="font-weight:bold;">ChatGPT</span>, <span style="font-weight:bold;">Gemini</span>와 같은 <span style="font-weight:bold;">AI</span> 기술이 차량 관리에도 접목되고 있습니다. <span style="font-weight:bold;">폴스타2</span>는 구글 안드로이드 오토모티브 OS를 탑재하여 <span style="font-weight:bold;">AI</span> 기반의 주행 보조 기능과 차량 진단 시스템을 활용할 수 있습니다. <span style="font-weight:bold;">AI</span> <span style="font-weight:bold;">기술</span>은 <span style="font-weight:bold;">폴스타2</span>의 운행 패턴을 분석하여 최적의 충전 시간대를 <span style="font-weight:bold;">추천</span>하고 소모품 교체 주기를 예측합니다. 이러한 스마트 기능을 활용하면 <span style="font-weight:bold;">폴스타2 유지비</span>를 더욱 효율적으로 관리할 수 있습니다.</p>
+
+      <h3>3. <span style="color:#1f5a9f;">폴스타2</span> <span style="font-weight:bold;">내돈내산 후기</span> 및 <span style="font-weight:bold;">전문 업체</span> <span style="font-weight:bold;">비교</span></h3>
+      <p><span style="font-weight:bold;">폴스타2 유지비</span>를 <span style="font-weight:bold;">저렴한곳</span>에서 관리하고 싶은 오너들은 공식 서비스센터 외에 <span style="font-weight:bold;">전문 업체</span>를 찾기도 합니다. <span style="font-weight:bold;">네이버</span> 블로그나 <span style="font-weight:bold;">유튜브</span>에서 <span style="font-weight:bold;">폴스타2 내돈내산 후기</span>를 검색하면 <span style="font-weight:bold;">폴스타2</span> 전용 휠, 타이어 <span style="font-weight:bold;">할인</span> <span style="font-weight:bold;">이벤트</span>를 진행하는 <span style="font-weight:bold;">업체</span> 정보를 얻을 수 있습니다. 또한 <span style="font-weight:bold;">페이스북</span>, <span style="font-weight:bold;">트위터</span>, <span style="font-weight:bold;">인스타그램</span> 등 소셜 미디어에서도 <span style="font-weight:bold;">폴스타2</span> 오너들이 <span style="font-weight:bold;">유지비</span> 절감 팁을 공유하고 있습니다.</p>
+      <div class="cta-button-group">
+        <a class="btn-cta" href="https://search.naver.com/search.naver?query=%ED%8F%B4%EC%8A%A4%ED%83%802+%EC%9C%A0%EC%A7%80%EB%B9%84+%EC%B6%94%EC%B2%9C">네이버에서 <span style="color:#ffffff;">폴스타2 유지비</span> 정보 더 찾아보기</a>
+        <a class="btn-cta" href="https://www.google.com/search?q=%ED%8F%B4%EC%8A%A4%ED%83%802+%EC%9C%A0%EC%A7%80%EB%B9%84+%EB%B9%84%EA%B5%90">구글에서 <span style="color:#ffffff;">폴스타2 유지비</span> <span style="color:#ffffff;">비교</span>하기</a>
+      </div>
+
+      <h3>4. <span style="color:#1f5a9f;">폴스타2 유지비</span> 관련 외부 신뢰 사이트 (정보의 출처)</h3>
+      <p>정확한 <span style="font-weight:bold;">폴스타2 유지비</span> 정보와 전기차 정책을 확인하려면 공신력 있는 기관의 정보를 참조해야 합니다. 다음은 <span style="font-weight:bold;">폴스타2 유지비</span> 관련 정보를 확인할 수 있는 주요 외부 사이트입니다.</p>
+      <ul>
+        <li><strong>Polestar Korea (공식):</strong> <a href="https://www.polestar.com/kr/" target="_blank">폴스타2 공식 웹사이트 (polestar.com/kr)</a> – <span style="font-weight:bold;">폴스타2</span> 모델별 <span style="font-weight:bold;">가격</span>, <span style="font-weight:bold;">워런티</span> 세부 규정을 확인할 수 있습니다.</li>
+        <li><strong>한국환경공단 (EV 충전):</strong> <a href="https://www.ev.or.kr/" target="_blank">전기차 충전 인프라 정보 (ev.or.kr)</a> – 환경부에서 운영하는 전기차 충전소 위치와 요금 <span style="font-weight:bold;">정보</span>를 제공합니다.</li>
+        <li><strong>네이버 지식백과:</strong> <a href="https://terms.naver.com/entry.naver?docId=6278835&cid=40942&categoryId=32379" target="_blank">전기차 유지보수 관련 정보 (terms.naver.com)</a> – 전기차의 <span style="font-weight:bold;">유지비</span> 구조와 <span style="font-weight:bold;">장단점</span>을 상세히 설명합니다.</li>
+        <li><strong>국토교통부 (교통 통계):</strong> <a href="http://www.molit.go.kr/USR/policyData/m_1/dtl.jsp?id=3813" target="_blank">자동차 등록 통계 (molit.go.kr)</a> – 국내 전기차 등록 대수 및 관련 정책 <span style="font-weight:bold;">정보</span>를 제공합니다.</li>
+        <li><strong>한국소비자원:</strong> <a href="https://www.kca.go.kr/sub/s10/s10_0100.do?searchkeyword=%EC%A0%84%EA%B8%B0%EC%B0%A8&searchtype=content" target="_blank">전기차 관련 소비자 피해 구제 정보 (kca.go.kr)</a> – 전기차 구매 및 A/S 관련 소비자 분쟁 사례와 대응 가이드를 제공합니다.</li>
+        <li><strong>나무위키:</strong> <a href="https://namu.wiki/w/%ED%8F%B4%EC%8A%A4%ED%83%80%202" target="_blank">폴스타 2 상세 정보 (namu.wiki)</a> – <span style="font-weight:bold;">폴스타2</span>의 역사, 모델 <span style="font-weight:bold;">차이점</span>, 커뮤니티 <span style="font-weight:bold;">후기</span> 등을 종합적으로 다룹니다.</li>
+      </ul>
+      <p>저희는 <span style="font-weight:bold;">폴스타2 유지비</span>에 대한 가장 정확하고 현실적인 <span style="font-weight:bold;">정보</span>를 제공하기 위해 노력하고 있습니다. <span style="font-weight:bold;">폴스타2</span> 구매 시점의 <span style="font-weight:bold;">신규 가입 혜택</span>이나 <span style="font-weight:bold;">할인</span> <span style="font-weight:bold;">이벤트</span> 정보는 <span style="font-weight:bold;">네이버</span>나 <span style="font-weight:bold;">구글</span> 검색을 통해 실시간으로 확인하는 것이 좋습니다.</p>
+    </section>
+
+  </main>
+
+  <!-- 이미지 삽입 (pexels.com 출처, 상업적 사용 가능) -->
+  <style>
+    .image-container { text-align: center; margin-bottom: 30px; }
+    .image-container img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  </style>
+  <div class="image-container">
+    <img src="https://images.pexels.com/photos/10074661/pexels-photo-10074661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pexels 출처: 폴스타2 충전하는 모습">
+    <p style="font-size:0.9rem; color:#777; margin-top:10px;">이미지 출처: Pexels.com - Polestar 2 charging image</p>
+  </div>
+
+  
